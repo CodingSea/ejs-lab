@@ -71,4 +71,18 @@ app.get("/menu", (req, res) =>
   res.render('menu.ejs', restaurantObj);
 });
 
+app.get("/menu/:category", (req, res) =>
+{
+  let dishes = RESTAURANT.menu.filter((dish) => {
+    return dish.category == req.params.category;
+  });
+  let dishesObj = 
+  {
+    category: req.params.category,
+    dishes: dishes
+  }
+  console.log(dishes);
+  res.render('category.ejs', dishesObj);
+});
+
 app.listen(3000);
