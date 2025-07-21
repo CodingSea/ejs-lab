@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+
+    <h1>Full Menu</h1>
+
+
+    <% let mains = []; %>
+    <% let desserts = []; %>
+    <% let sides = []; %>
+
+    <% restaurant.menu.forEach((dish) => {%>
+        <% if(dish.category == "category") { %>
+            <% mains.push(dish); %>
+        <% } else if(dish.category == "desserts") {%>
+            <% desserts.push(dish); %>
+        <% } else if(dish.category == "sides") {%>
+            <% sides.push(dish); %>
+        <% }%>
+    <% }); %>
+
+    <h2>Mains</h2>
+    <% for(let i = 0; i < mains.length; i++) { %>
+        <p><%= mains[i] %></p>
+    <% } %>
+    <h2>Desserts</h2>
+
+
+    <h2>Sides</h2>
+
+</body>
+</html>
