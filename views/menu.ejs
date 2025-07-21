@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <%- include('./partials/nav') %>
@@ -27,16 +28,31 @@
 
     <h2>Mains</h2>
     <% for(let i = 0; i < mains.length; i++) { %>
-        <p><%= mains[i].name %></p>
+        <div class="card">
+            <p>Name: <%= mains[i].name %></p>
+            <p>Price: <%= mains[i].price %></p>
+            <p>Rating: <%= mains[i].rating %>/5</p>
+            <p>Details: <%= mains[i].details %></p>
+        </div>
     <% } %>
     <h2>Desserts</h2>
     <% for(let i = 0; i < desserts.length; i++) { %>
-        <p><%= desserts[i].name %></p>
+        <div class="card">
+            <p>Name: <%= desserts[i].name %></p>
+            <p>Price: <%= desserts[i].price %></p>
+            <p>Rating: <%= desserts[i].rating %>/5</p>
+            <p>Details: <%= desserts[i].details %></p>
+        </div>
     <% } %>
 
     <h2>Sides</h2>
     <% for(let i = 0; i < sides.length; i++) { %>
-        <p><%= sides[i].name %></p>
+        <div class="card">
+            <p>Name: <%= sides[i].name %></p>
+            <p>Price: <%= sides[i].price %></p>
+            <p>Rating: <%= sides[i].rating %>/5</p>
+            <p>Details: <%= sides[i].details %></p>
+        </div>
     <% } %>
 
 </body>
