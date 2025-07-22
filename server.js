@@ -81,7 +81,6 @@ app.get("/menu/:category", (req, res) =>
     category: req.params.category,
     dishes: dishes
   }
-  console.log(dishes);
   res.render('category.ejs', dishesObj);
 });
 
